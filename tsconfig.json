@@ -1,10 +1,14 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -13,8 +17,23 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "baseUrl": ".",
+    "incremental": true,
+    "paths": {
+        "@/components/*": ["src/components/*"],
+        "@/core/*": ["src/core/*"],
+        "@/util/*": ["src/util/*"],
+        "@/pages/*": ["src/pages/*"],
+        "@/styles/*": ["styles/*"],
+        "@/public/*": ["public/*"],
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/components/Hello/Hello.tsx", "src/components/Hello/Hello.stories.tsx", "src/pages/post.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
